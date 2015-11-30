@@ -1,6 +1,5 @@
 @function layer($above, $below) {
   $alpha-above: alpha($above);
-
   $color: null;
   $alpha: null;
 
@@ -10,7 +9,6 @@
   @else {
     $color-above: rgba($above, 1);
     $color-below: rgba($below, 1);
-
     $alpha-below: alpha($below);
 
     @if $alpha-below == 1 {
