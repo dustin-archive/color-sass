@@ -1,0 +1,11 @@
+$color-ui-base: $navy !default;
+$color-ui-background: $white !default;
+
+$color-ui-1: tint($color-ui-base, $color-ui-background, 1 / 8) !default;
+$color-ui-2: tint($color-ui-base, $color-ui-background, 2 / 8) !default;
+$color-ui-3: tint($color-ui-base, $color-ui-background, 3 / 8) !default;
+$color-ui-4: tint($color-ui-base, $color-ui-background, 4 / 8) !default;
+$color-ui-5: tint($color-ui-base, $color-ui-background, 5 / 8) !default;
+$color-ui-6: tint($color-ui-base, $color-ui-background, 6 / 8) !default;
+$color-ui-7: tint($color-ui-base, $color-ui-background, 7 / 8) !default;
+$color-ui-8: tint($color-ui-base, $color-ui-background, 8 / 8) !default;

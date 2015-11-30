@@ -1,0 +1,3 @@
+@function tint($color, $background, $alpha: 0) {
+  @return layer(rgba($color, $alpha), $background);
+}
