@@ -1,10 +1,10 @@
 {
   "name": "color-sass",
-  "description": "",
   "homepage": "https://github.com/dustindowell22/color-sass",
   "authors": [
     "Dustin Dowell <dustindowell22@gmail.com>"
   ],
+  "description": "Sweet color library",
   "main": "scss/main.scss",
   "keywords": [
     "color",
