@@ -1,0 +1,7 @@
+@function random-color($start: 0, $end: 256) {
+  @return rgb(
+    $start + random($end),
+    $start + random($end),
+    $start + random($end)
+  );
+}
