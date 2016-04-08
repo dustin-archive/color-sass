@@ -1,25 +1,54 @@
-@function layer($above, $below) {
+// @function layer($above, $below) {
+//   $alpha-above: alpha($above);
+//   $color: null;
+//   $alpha: null;
+//
+//   @if $alpha-above == 1 {
+//     @return $above;
+//   }
+//   @else {
+//     $color-above: rgba($above, 1);
+//     $color-below: rgba($below, 1);
+//     $alpha-below: alpha($below);
+//
+//     @if $alpha-below == 1 {
+//       $color: mix($color-above, $color-below, $alpha-above * 100%);
+//       $alpha: 1;
+//     }
+//     @else {
+//       $color: mix($color-above, $color-below);
+//       $alpha: $alpha-below + ((1 - $alpha-below) * $alpha-above);
+//     }
+//   }
+//
+//   @return rgba($color, $alpha);
+// }
+
+@function layer($list) {
+  $above: nth($list, length($list));
   $alpha-above: alpha($above);
-  $color: null;
-  $alpha: null;
 
   @if $alpha-above == 1 {
     @return $above;
   }
-  @else {
-    $color-above: rgba($above, 1);
-    $color-below: rgba($below, 1);
-    $alpha-below: alpha($below);
 
-    @if $alpha-below == 1 {
-      $color: mix($color-above, $color-below, $alpha-above * 100%);
-      $alpha: 1;
-    }
-    @else {
-      $color: mix($color-above, $color-below);
-      $alpha: $alpha-below + ((1 - $alpha-below) * $alpha-above);
-    }
+  $color: null;
+  $alpha: null;
+
+  $color-above: rgba($above, 1);
+  $color-below: rgba($below, 1);
+  $alpha-below: alpha($below);
+
+  @if $alpha-below == 1 {
+    $color: mix($color-above, $color-below, $alpha-above * 100%);
+    $alpha: 1;
+  }
+  @else {
+    $color: mix($color-above, $color-below);
+    $alpha: $alpha-below + ((1 - $alpha-below) * $alpha-above);
   }
 
   @return rgba($color, $alpha);
 }
+
+@debug layer(rgba(red, 0.5) rgba(blue, 0.5) rgba(green, 0.5));
