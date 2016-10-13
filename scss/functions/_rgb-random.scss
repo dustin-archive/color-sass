@@ -1,4 +1,4 @@
-@function random-color($start: 0, $end: 255) {
+@function rgb-random($start: 0, $end: 255) {
   @return rgb(
     $start + random($end - $start),
     $start + random($end - $start),
